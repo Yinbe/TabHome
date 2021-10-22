@@ -52,7 +52,7 @@
   },
   "browser_action": {
   },
-  "omnibox": { "keyword" : "bm" },
+  "omnibox": { "keyword" : "th" },
   "permissions": [
     "chrome://favicon/*",
     "bookmarks",

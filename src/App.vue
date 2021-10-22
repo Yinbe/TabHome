@@ -4,7 +4,6 @@
 </div>
 </template>
 <script>
-import "./assets/css/fontawesome-all.min.css";
 import "element-ui/lib/theme-chalk/index.css";
 
 export default {

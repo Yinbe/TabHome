@@ -1,7 +1,7 @@
 {
   /*app description*/
   "ext_name": {
-    "message": "Bookmark"
+    "message": "TabHome"
   },
   "ext_desc": {
     "message": "Process Chrome\"Other Folders\" bookmarks. There are functions such as storing \"temporary\" bookmarks, saving bookmarks in categories, shortcut key operations, custom settings, quick viewing of bookmarks, support for direct search of bookmarks in the search bar, and efficient management of bookmarks. View the browsing history of the current website and manage the installed extensions."

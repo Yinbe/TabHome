@@ -11,7 +11,7 @@ const timestampForFilesInDirectory = dir =>
     files.map(f => f.name + f.lastModifiedDate).join ())
 
 const reload = () => {
-  chrome.runtime.openOptionsPage()
+  browser.runtime.openOptionsPage()
 }
 
 const watchChanges = (dir, lastTimestamp) => {
@@ -25,10 +25,10 @@ const watchChanges = (dir, lastTimestamp) => {
 }
 
 export const autoreload = () => {
-  chrome.management.getSelf(self => {
+  browser.management.getSelf(self => {
     if (self.installType === 'development') {
       console.log('autoreload watching changes')
-      chrome.runtime.getPackageDirectoryEntry(dir => watchChanges(dir))
+      browser.runtime.getPackageDirectoryEntry(dir => watchChanges(dir))
     }
   })
 }

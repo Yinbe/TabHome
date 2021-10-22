@@ -172,7 +172,7 @@ const init = async () => {
 
 init();
 
-chrome.omnibox.onInputEntered.addListener(
+browser.omnibox.onInputEntered.addListener(
   function(text) {
     // Encode user input for special characters , / ? : @ & = + $ #
     var newURL = browser.runtime.getURL(`index.html#/view/home?search=${encodeURIComponent(text)}`);
