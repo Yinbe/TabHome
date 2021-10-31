@@ -93,7 +93,7 @@ const storeTabs = async tabs => {
   const newList = list.createNewTabList({tabs: pickTabs(tabs)});
 
   /*get chrome bookmark pro folder BPF*/
-  let unSortFolder = "BPF";
+  let unSortFolder = "TabHome";
   chrome.bookmarks.getChildren("2", function (nodesRes) {
     let nodes = nodesRes.filter(i => i.title === unSortFolder);
     if (nodes.length === 0) {
