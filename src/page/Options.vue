@@ -52,13 +52,13 @@
         </el-card>
         <el-card class="box-card">
           <div slot="header" class="clearfix">
-            <span>{{ "标签" }}</span>
+            <span>{{ __('ui_setting_view_bookmark') }}</span>
           </div>
           <div
             style="display: flex;justify-content: center; align-items: center;"
           >
             <el-transfer
-              :titles="['显示标签', '隐藏标签']"
+              :titles="[__('ui_setting_view_bookmark_show'), __('ui_setting_view_bookmark_hide')]"
               v-model="value"
               :data="dataFransfer"
               @change="transferChange"
@@ -67,24 +67,24 @@
         </el-card>
         <el-card class="box-card">
           <div slot="header" class="clearfix">
-            <span>{{ "历史记录" }}</span>
+            <span>{{ __('ui_setting_view_history') }}</span>
           </div>
           <el-row :gutter="20" class="options">
             <el-col :span="16">
-              <span>{{ "相距当前时间" }}</span>
+              <span>{{ __('ui_setting_view_history_time') }}</span>
             </el-col>
             <el-col :span="8">
               <el-input-number v-model="historyTime" @blur="historyTimeChange" :min="7" size="mini"  :precision="0"></el-input-number>
-              <span>{{ "天" }}</span>
+              <span>{{ __('ui_setting_view_history_day') }}</span>
             </el-col>
           </el-row>
           <el-row :gutter="20" class="options">
             <el-col :span="16">
-              <span>{{ "显示记录条数" }}</span>
+              <span>{{ __('ui_setting_view_history_count') }}</span>
             </el-col>
             <el-col :span="8">
               <el-input-number v-model="historyNum" @blur="historyNumChange" :min="10" size="mini" controls-position="right" :precision="0"></el-input-number>
-              <span>{{ "条" }}</span>
+              <span>{{ __('ui_setting_view_history_num') }}</span>
             </el-col>
           </el-row>
         </el-card>

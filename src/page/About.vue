@@ -12,7 +12,7 @@
                 <span>{{ __('ext_desc') }}</span>
                 <div style="margin-top: 3px;">{{ __('ext_introduce') }}</div>
                 <el-divider></el-divider>
-                <el-link type="primary" href="https://github.com/rejerry/bookmark" target="_blank">点击查看使用说明</el-link>
+                <el-link type="primary" href="https://github.com/rejerry/bookmark" target="_blank">{{__('ui_about_view_about')}}</el-link>
             </el-card>
         </el-col>
     </el-row>

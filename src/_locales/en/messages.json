@@ -8,7 +8,7 @@
   },
 
   "ext_introduce": {
-    "message": "The plug-in is completely open source, the open source address is https://github.com/rejerry/bookmark. Welcome to discuss bugs, discuss features, Star Project"
+    "message": "The plug-in is completely open source, the open source address is https://github.com/Yinbe/bookmark. Welcome to discuss bugs, discuss features, Star Project"
   },
 
   /*右键菜单&icon右键菜单*/
@@ -54,5 +54,107 @@
   /*设置分类title*/
   "ui_options_behaviour": {
     "message": "Setting"
+  },
+
+  "ui_menu_item_home": {
+    "message": "Home"
+  },
+
+  "ui_menu_item_bookmark": {
+    "message": "Bookmark"
+  },
+  
+  "ui_menu_item_extension": {
+    "message": "Extension"
+  },
+  
+  "ui_menu_item_options": {
+    "message": "Setting"
+  },
+
+  "ui_menu_item_about": {
+    "message": "About"
+  },
+  
+  "ui_about_view_about": {
+    "message": "Click to view the instructions"
+  },
+
+  "ui_extension_view_search_placeholder": {
+    "message": "Please enter filter content"
+  },
+
+  "ui_home_view_search_button": {
+    "message": "Search"
+  },
+
+  "ui_home_view_search_title": {
+    "message": "Search content"
+  },
+
+  "ui_home_view_search_all": {
+    "message": "All"
+  },
+
+  "ui_home_view_search_home": {
+    "message": "Current"
+  },
+
+  "ui_home_view_search_baidu": {
+    "message": "Baidu Search"
+  },
+
+  "ui_home_view_tab_recovery": {
+    "message": "Recovery List"
+  },
+
+  "ui_home_view_tab_delete": {
+    "message": "Delete List"
+  },
+
+  "ui_home_view_tab_title": {
+    "message": "Please set the title"
+  },
+
+  "ui_bookmark_view_tab_move": {
+    "message": "Move to home page"
+  },
+
+  "ui_bookmark_view_tab_move_right": {
+    "message": "Move to right page"
+  },
+
+  "ui_setting_view_bookmark": {
+    "message": "Bookmark"
+  },
+
+  "ui_setting_view_bookmark_show": {
+    "message": "Display label"
+  },
+
+  "ui_setting_view_bookmark_hide": {
+    "message": "Hide label"
+  },
+
+  "ui_setting_view_history": {
+    "message": "Historical records"
+  },
+
+  "ui_setting_view_history_time": {
+    "message": "From current time"
+  },
+
+  "ui_setting_view_history_day": {
+    "message": "days"
+  },
+
+  "ui_setting_view_history_count": {
+    "message": "Displays the number of records"
+  },
+
+  "ui_setting_view_history_num": {
+    "message": "records"
   }
+
+
 }

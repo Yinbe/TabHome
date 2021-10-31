@@ -2,7 +2,7 @@
     <div class="box-content" style="padding:30px;">
         <div class="search">
             <div class="searchbar">
-                <el-input @input="filterExt" placeholder="请输入筛选内容" v-model="searchContent" suffix-icon="el-icon-search"></el-input>
+                <el-input @input="filterExt" :placeholder="__('ui_extension_view_search_placeholder')"  v-model="searchContent" suffix-icon="el-icon-search"></el-input>
             </div>
         </div>
 
@@ -57,6 +57,7 @@
             this.init();
         },
         methods: {
+            __,
             async init() {
                 const getI18N = chrome.i18n.getMessage;
                 const myid = getI18N('@@extension_id');

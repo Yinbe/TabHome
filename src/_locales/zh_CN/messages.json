@@ -8,7 +8,7 @@
   },
 
   "ext_introduce": {
-    "message": "该插件完全开源，开源地址https://github.com/rejerry/bookmark。欢迎来讨论bug，讨论功能，Star项目"
+    "message": "该插件完全开源，开源地址https://github.com/Yinbe/bookmark。欢迎来讨论bug，讨论功能，Star项目"
   },
 
   /*右键菜单&icon右键菜单*/
@@ -51,8 +51,111 @@
     "message": "在新窗口打开"
   },
 
+
   /*设置分类title*/
   "ui_options_behaviour": {
     "message": "设置"
+  },
+
+  
+  "ui_menu_item_home": {
+    "message": "首页"
+  },
+
+  "ui_menu_item_bookmark": {
+    "message": "书签"
+  },
+  
+  "ui_menu_item_extension": {
+    "message": "扩展"
+  },
+  
+  "ui_menu_item_options": {
+    "message": "设置"
+  },
+
+  "ui_menu_item_about": {
+    "message": "关于"
+  },
+
+  "ui_about_view_about": {
+    "message": "点击查看使用说明"
+  },
+
+  "ui_extension_view_search_placeholder": {
+    "message": "请输入筛选内容"
+  },
+
+  "ui_home_view_search_button": {
+    "message": "搜索"
+  },
+
+  "ui_home_view_search_title": {
+    "message": "搜索内容"
+  },
+
+  "ui_home_view_search_all": {
+    "message": "全部书签"
+  },
+
+  "ui_home_view_search_home": {
+    "message": "当前书签"
+  },
+
+  "ui_home_view_search_baidu": {
+    "message": "百度搜索"
+  },
+
+  "ui_home_view_tab_recovery": {
+    "message": "恢复列表"
+  },
+
+  "ui_home_view_tab_delete": {
+    "message": "删除列表"
+  },
+
+  "ui_home_view_tab_title": {
+    "message": "请设置标题"
+  },
+
+  "ui_bookmark_view_tab_move": {
+    "message": "移到首页"
+  },
+
+  "ui_bookmark_view_tab_move_right": {
+    "message": "移到右边"
+  },
+
+  "ui_setting_view_bookmark": {
+    "message": "标签"
+  },
+
+  "ui_setting_view_bookmark_show": {
+    "message": "显示标签"
+  },
+
+  "ui_setting_view_bookmark_hide": {
+    "message": "隐藏标签"
+  },
+
+  "ui_setting_view_history": {
+    "message": "历史记录"
+  },
+
+  "ui_setting_view_history_time": {
+    "message": "相距当前时间"
+  },
+
+  "ui_setting_view_history_day": {
+    "message": "天"
+  },
+
+  "ui_setting_view_history_count": {
+    "message": "显示记录条数"
+  },
+
+  "ui_setting_view_history_num": {
+    "message": "条"
   }
+
 }
