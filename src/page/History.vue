@@ -1,7 +1,7 @@
 <template>
     <div class="box-card">
         <div class="searchbar">
-          <el-input class="title" @input="filterHistory" placeholder="请输入筛选内容" v-model="searchContent" ></el-input>
+          <el-input class="title" @input="filterHistory" :placeholder="__('ui_extension_view_search_placeholder')" v-model="searchContent" ></el-input>
           <i class="el-icon-search" style="padding: 3px"></i>
         </div>
         <el-scrollbar>
@@ -43,6 +43,7 @@
             this.init();
         },
         methods: {
+            __,
             async init() {
 
                 let dataT = await storage.getUOptions('historyTime')

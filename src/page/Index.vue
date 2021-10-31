@@ -8,20 +8,20 @@
           >
             <el-card class="box-card" :body-style="{padding: '0px'}" :style="{margin: _px(itemMeta.margin)}">
               <div v-if="folder.title !== bpf" class="label" style="width: inherit">
-                <el-tooltip effect="dark" content="移到右边" placement="bottom">
+                <el-tooltip effect="dark" :content="__('ui_bookmark_view_tab_move_right')" placement="bottom">
                   <i class="el-icon-star-off" @click="moveFolder(folder.id, defaultDestinationFolder)"></i>
                 </el-tooltip>
-                <el-tooltip effect="dark" content="恢复列表" placement="bottom">
+                <el-tooltip effect="dark" :content="__('ui_home_view_tab_recovery')" placement="bottom">
                   <i class="el-icon-position" @click="viewFolder(folder)"></i>
                 </el-tooltip>
                 <div class="label-title">
-                  <a>{{folder.title === '' ? '未设置名字' : folder.title}}</a>
+                  <a>{{folder.title === '' ? __('ui_home_view_tab_title') : folder.title}}</a>
                 </div>
                 <i class="el-icon-close" @click="removeFolder(folder.id)"></i>
               </div>
               <div v-else class="label" style="width: inherit">
                 <div class="bpf-label-title">
-                  <a>{{folder.title === '' ? '未设置名字' : folder.title}}</a>
+                  <a>{{folder.title === '' ? __('ui_home_view_tab_title') : folder.title}}</a>
                 </div>
               </div>
               <draggable :list="folder.children" :options="{animation:150}" group="unsort" @change="draggableLog">
@@ -50,20 +50,20 @@
                   <el-input v-if="selectedFolderIndex == folderIndex" class="item" @blur="modifyFolderTitle(folder.id)"
                     placeholder="请输入内容" v-model="folderTitle" :ref='"elInput"+folderIndex' clearable></el-input>
                   <div class="sorted-label-title" v-if="selectedFolderIndex != folderIndex">
-                    <a>{{folder.title === '' ? '未设置名字' : folder.title}}</a>
+                    <a>{{folder.title === '' ? __('ui_home_view_tab_title') : folder.title}}</a>
                   </div>
-                  <div class="label-menu" @click="moveFolder(folder.id, homeDestinationFolder)">移到首页</div>
-                  <div class="label-menu" @click="viewFolder(folder)">恢复列表</div>
-                  <div class="label-menu" @click="removeFolder(folder.id)">删除列表</div>
+                  <div class="label-menu" @click="moveFolder(folder.id, homeDestinationFolder)">{{__('ui_bookmark_view_tab_move')}}</div>
+                  <div class="label-menu" @click="viewFolder(folder)">{{__('ui_home_view_tab_recovery')}}</div>
+                  <div class="label-menu" @click="removeFolder(folder.id)">{{__('ui_home_view_tab_delete')}}</div>
                 </div>
                 <div v-else class="label" style="width: inherit">
                   <div class="other-label-title">
                     <a @click="viewFolder(folder, storage.getOptions().open_in_new_window)">{{folder.title === '' ?
-                      '未设置名字' : folder.title}}</a>
+                      __('ui_home_view_tab_title') : folder.title}}</a>
                   </div>
                 </div>
                 <el-row :gutter="10" style="width: inherit" :list="folder.children">
-                  <draggable v-model="folder.children" :options="{ animation: 150}" group="sorted" @change="draggableLog">
+                  <draggable v-model="folder.children" :options="{ animation: 350}" group="sorted" @change="draggableLog">
                     <transition-group>
                       <el-col :span="6" v-for="(tab, tabIndex) in folder.children" :key="tabIndex">
                         <div class="link">
@@ -108,6 +108,7 @@
   import draggable from 'vuedraggable'
   import tabs from "@/common/onetab/tabs";
   import storage from "@/common/onetab/storage";
+  import __ from "@/common/util/i18n";
 
   export default {
     name: "Index",
@@ -151,6 +152,7 @@
       this.getOther();
     },
     methods: {
+      __,
       /*1 draggable*/
       /*added:newIndex,element*/
       /*removed:oldIndex,element*/

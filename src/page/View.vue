@@ -14,23 +14,23 @@
       >
         <el-menu-item index="/view/home">
           <i class="el-icon-s-platform"></i>
-          <span slot="title">首页</span>
+          <span slot="title">{{ __('ui_menu_item_home') }}</span>
         </el-menu-item>
         <el-menu-item index="/view/index">
           <i class="el-icon-s-management"></i>
-          <span slot="title">书签</span>
+          <span slot="title">{{ __('ui_menu_item_bookmark') }}</span>
         </el-menu-item>
         <el-menu-item index="/view/extension">
           <i class="el-icon-menu"></i>
-          <span slot="title">扩展</span>
+          <span slot="title">{{ __('ui_menu_item_extension') }}</span>
         </el-menu-item>
         <el-menu-item index="/view/options">
           <i class="el-icon-s-tools"></i>
-          <span slot="title">设置</span>
+          <span slot="title">{{ __('ui_menu_item_options') }}</span>
         </el-menu-item>
         <el-menu-item index="/view/about">
           <i class="el-icon-info"></i>
-          <span slot="title">关于</span>
+          <span slot="title">{{ __('ui_menu_item_about') }}</span>
         </el-menu-item>
       </el-menu>
       <el-main>
@@ -102,6 +102,7 @@
 </style>
 
 <script>
+import __ from "@/common/util/i18n";
 import storage from "@/common/onetab/storage";
 
 export default {
@@ -116,6 +117,7 @@ export default {
     this.init();
   },
   methods: {
+    __,
     async init() {
       let data = await storage.getUOptions('switchMenu')
       console.log(data)

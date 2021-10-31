@@ -6,20 +6,19 @@
           <el-popover
           ref="popover"
           placement="bottom"
-          title="搜索内容"
-          width="300"
+          :title="__('ui_home_view_search_title')"
           trigger="manual"
           v-model="iconHover">
           <el-radio-group @change="setSearchIcon" v-model="searchRadio">
-            <el-radio label="1" @click.native="iconHover = false">全部书签</el-radio>
-            <el-radio label="2" @click.native="iconHover = false">当前书签</el-radio>
-            <el-radio label="3" @click.native="iconHover = false">百度搜索</el-radio>
+            <el-radio label="1" @click.native="iconHover = false">{{__('ui_home_view_search_all')}}</el-radio>
+            <el-radio label="2" @click.native="iconHover = false">{{__('ui_home_view_search_home')}}</el-radio>
+            <el-radio label="3" @click.native="iconHover = false">{{__('ui_home_view_search_baidu')}}</el-radio>
           </el-radio-group>
         </el-popover>
-          <el-input @keydown.enter.native="searchInput" v-model="input" placeholder="请输入内容" @input="inputValue">
+          <el-input @keydown.enter.native="searchInput" v-model="input" :placeholder="__('ui_extension_view_search_placeholder')" @input="inputValue">
             <i slot="prefix" @click="iconHover = true"  v-popover:popover style="display: flex;align-items: center;height: 100%;padding-left:5px;"><img :src="searchIcon"></i>
         </el-input>
-        <el-button @click="searchInput" type="primary" round>搜索</el-button></el-input>
+        <el-button @click="searchInput" type="primary" round>{{__('ui_home_view_search_button')}}</el-button></el-input>
         </div>
       </div>
       
@@ -32,15 +31,15 @@
             <el-input v-if="selectedFolderIndex == folderIndex" class="item" @blur="modifyFolderTitle(folder.id)"
               placeholder="请输入内容" v-model="folderTitle" :ref='"elInput"+folderIndex' clearable></el-input>
             <div class="sorted-label-title" v-if="selectedFolderIndex != folderIndex">
-              <a>{{folder.title === '' ? '未设置名字' : folder.title}}</a>
+              <a>{{folder.title === '' ? __('ui_home_view_tab_title') : folder.title}}</a>
             </div>
-            <div class="label-menu" @click="viewFolder(folder)">恢复列表</div>
-            <div class="label-menu" @click="removeFolder(folder.id)">删除列表</div>
+            <div class="label-menu" @click="viewFolder(folder)">{{__('ui_home_view_tab_recovery')}}</div>
+            <div class="label-menu" @click="removeFolder(folder.id)">{{__('ui_home_view_tab_delete')}}</div>
           </div>
           <div v-else class="label" style="width: inherit">
             <div class="other-label-title">
               <a @click="viewFolder(folder, storage.getOptions().open_in_new_window)">{{folder.title === '' ?
-                '未设置名字' : folder.title}}</a>
+                __('ui_home_view_tab_title') : folder.title}}</a>
             </div>
           </div>
           <el-row :gutter="10" style="width: inherit" :list="folder.children">
@@ -67,6 +66,7 @@
 <script>
   import draggable from 'vuedraggable'
   import storage from "@/common/onetab/storage";
+  import __ from "@/common/util/i18n";
   import _ from 'lodash';
   import tabs from "@/common/onetab/tabs";
 
@@ -102,6 +102,7 @@
       chrome.bookmarks.onRemoved.addListener(this.removedCallback);
     },
     methods: {
+      __,
       inputValue(){
         console.log("inputValue")
         if (!this.input) {
