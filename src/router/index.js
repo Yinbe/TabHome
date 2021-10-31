@@ -19,12 +19,12 @@ Vue.use(ElementUI);
 
 
 const messages = {
-  en: Object.assign(enLocale),
-  zh: Object.assign(zhLocale)
+  'en': Object.assign(enLocale),
+  'zh-cn': Object.assign(zhLocale)
 }
 
 const i18n = new VueI18n({
-  locale: (navigator.language || navigator.browserLanguage).toLowerCase() ||'zh', // set locale
+  locale: (navigator.language || navigator.browserLanguage).toLowerCase() ||'zh-cn', // set locale
   messages, // set locale messages
 })
 
@@ -77,8 +77,8 @@ if (PRODUCTION) import(
   ).then(({tracker}) => {
   tracker();
   router.beforeEach((to, from, next) => {
-    ga('set', 'page', to.name);
-    ga('send', 'pageview');
+    dataLayer.push('event', 'page', to.name);
+    dataLayer.push('config', 'pageview');
     next()
   })
 });
