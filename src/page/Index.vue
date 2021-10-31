@@ -138,7 +138,7 @@
           content: 24,
           header: 35.2
         },
-        bpf: "BPF",
+        bpf: "TabHome",
         otherBK: "其他书签",
         otherBKen: "Other bookmarks"
       }
@@ -358,7 +358,7 @@
         const _this = this;
         chrome.bookmarks.getSubTree("2", function (res) {
           let otherFolder = res[0];
-          let resIncludeBPF = otherFolder.children.filter(i => i.title === "BPF");
+          let resIncludeBPF = otherFolder.children.filter(i => i.title === "TabHome");
 
           if (resIncludeBPF.length === 0) {
             _this.sortedBookmarks = _this.get(otherFolder);
@@ -370,7 +370,7 @@
             _this.sortedBookmarks = _this.get(otherFolder);
 
             if (resIncludeBPF.length !== 1) {
-              console.log('unsort只会显示排在最前面的"BPF"文件夹,其他的"BPF"文件夹将会显示在sorted,请保持有且仅有一个"BPF"文件夹');
+              console.log('unsort只会显示排在最前面的"TabHome"文件夹,其他的"TabHome"文件夹将会显示在sorted,请保持有且仅有一个"TabHome"文件夹');
             }
           }
         });
