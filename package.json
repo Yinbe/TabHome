@@ -9,8 +9,6 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --watch",
     "build": "cross-env NODE_ENV=production webpack",
-    "postbuild": "yarn run package",
-    "package": "rm -f dist.zip && cd dist && zip -r ../dist.zip ./*",
     "lint": "eslint src",
     "prebuild": "yarn lint"
   },
@@ -27,7 +25,7 @@
     "vue": "^2.5.16",
     "vue-i18n": "^8.26.5",
     "vue-router": "^3.0.1",
-    "vuedraggable": "^2.20.0",
+    "vuedraggable": "^2.24.3",
     "webextension-polyfill": "^0.8.0"
   },
   "devDependencies": {
