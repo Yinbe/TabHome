@@ -9,6 +9,7 @@ parserOptions:
   sourceType: module
 rules:
   no-console: 0
+  'no-unused-vars': 'off'
 globals:
   DEBUG: true
   PRODUCTION: true

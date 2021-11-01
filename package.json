@@ -1,9 +1,9 @@
 {
-  "name": "bookmark",
+  "name": "TabHome",
   "version": "1.1.0",
   "description": "处理书签栏存放不下的书签(Handle bookmarks that do not fit in the bookmarks bar)",
   "main": "index.js",
-  "repository": "https://github.com/Yinbe/bookmark",
+  "repository": "https://github.com/Yinbe/TabHome",
   "author": "Yinbe",
   "license": "GPL-3.0",
   "scripts": {

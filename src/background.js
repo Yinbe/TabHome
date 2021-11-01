@@ -10,10 +10,10 @@ if (DEBUG) import(
   './common/util/autoreload'
   ).then(({autoreload}) => autoreload());
 
-if (PRODUCTION) import(
-  /* webpackChunkName: "tracker", webpackMode: "lazy" */
-  '@/common/util/tracker'
-  ).then(({tracker}) => tracker());
+// if (PRODUCTION) import(
+//   /* webpackChunkName: "tracker", webpackMode: "lazy" */
+//   '@/common/util/tracker'
+//   ).then(({tracker}) => tracker());
 
 if (DEBUG) {
   window.tabs = tabs;

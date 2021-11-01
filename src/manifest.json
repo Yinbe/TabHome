@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "__MSG_ext_name__",
-  "version": "1.0.1.8190",
+  "version": "1.0.21.1101",
   "default_locale": "zh_CN",
   "description": "__MSG_ext_desc__",
   "author": "Jerry <code.ci@qq.com>",
@@ -62,7 +62,7 @@
     "history",
     "management"
   ],
-  "homepage_url": "https://github.com/rejerry/bookmark",
+  "homepage_url": "https://github.com//Yinbe/TabHome",
   "offline_enabled": true,
   "options_page": "index.html#/view/options",
   "options_ui": {

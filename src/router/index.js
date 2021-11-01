@@ -71,16 +71,16 @@ const router = new Router({
   ]
 });
 
-if (PRODUCTION) import(
-  /* webpackChunkName: "tracker", webpackMode: "lazy" */
-  '@/common/util/tracker'
-  ).then(({tracker}) => {
-  tracker();
-  router.beforeEach((to, from, next) => {
-    dataLayer.push('event', 'page', to.name);
-    dataLayer.push('config', 'pageview');
-    next()
-  })
-});
+// if (PRODUCTION) import(
+//   /* webpackChunkName: "tracker", webpackMode: "lazy" */
+//   '@/common/util/tracker'
+//   ).then(({tracker}) => {
+//   tracker();
+//   router.beforeEach((to, from, next) => {
+//     dataLayer.push('event', 'page', to.name);
+//     dataLayer.push('config', 'pageview');
+//     next()
+//   })
+// });
 
 export default router
