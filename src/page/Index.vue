@@ -24,7 +24,7 @@
                   <a>{{folder.title === '' ? __('ui_home_view_tab_title') : folder.title}}</a>
                 </div>
               </div>
-              <draggable :list="folder.children" :options="{animation:150}" group="unsort" @change="draggableLog">
+              <draggable :list="folder.children" :animation="350" group="unsort" @change="draggableLog">
                 <div class="link" style="width: inherit" v-for="(tab, tabIndex) in folder.children" :key="tabIndex">
                   <div class="link-title">
                     <img :src="'chrome://favicon/size/16@2x/'+tab.url">
@@ -77,23 +77,6 @@
                     </transition-group>
                   </draggable>
                 </el-row>
-                <!-- <draggable
-            v-model="folder.children"
-            :options="{ animation: 150 }"
-            @change="draggableLog"
-          >
-            <transition-group tag="div" class="list" name="list">
-              <div class="item" v-for="(tab, index) in folder.children" :index="index" :key="index">
-                <div class="link">
-                  <div class="link-title">
-                    <img :src="'chrome://favicon/size/16@2x/'+tab.url">
-                    <a :href="tab.url" target="_blank">{{tab.title}}</a>
-                  </div>
-                  <i class="el-icon-close" @click="removeBookmark(tab.id)"></i>
-                </div>
-              </div>
-            </transition-group>
-      </draggable> -->
               </div>
             </div>
           </div>
