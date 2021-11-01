@@ -1,5 +1,4 @@
 {
-  /*app description*/
   "ext_name": {
     "message": "TabHome"
   },
@@ -11,7 +10,6 @@
     "message": "该插件完全开源，开源地址https://github.com/Yinbe/TabHome。欢迎来讨论bug，讨论功能，Star项目"
   },
 
-  /*右键菜单&icon右键菜单*/
   "opt_desc_browserAction": {
     "message": "当图标被点击时的行为"
   },
@@ -40,7 +38,6 @@
     "message": "查看当前网站的浏览历史"
   },
 
-  /*设置选项*/
   "opt_desc_addHistory": {
     "message": "将储存的标签加入浏览器历史记录中"
   },
@@ -51,8 +48,6 @@
     "message": "在新窗口打开"
   },
 
-
-  /*设置分类title*/
   "ui_options_behaviour": {
     "message": "设置"
   },
