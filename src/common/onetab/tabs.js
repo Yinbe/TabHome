@@ -34,21 +34,32 @@ const groupTabsInCurrentWindow = async () => {
 const openTab = async tab => browser.tabs.create({url: tab.url});
 
 
-/*如果存在多个index.html#/app 地址下的page,切换到latest page,其他关闭；如果没有则新建一个*/
-const openTabLists = async () => {
+/*如果存在多个index.html#/view/ 地址下的page,切换到latest page,其他关闭；如果没有则新建一个*/
+const openTabLists = async (type = 0) => {
+  
   const currentWindow = await browser.windows.getCurrent();
   const windowId = currentWindow.id;
   const tabs = await getAllInWindow(windowId);
   let tabsRes = tabs.filter(i =>
-    browser.runtime.getURL('index.html#/view/index') === i.url
-    || browser.runtime.getURL('index.html#/view/index') === i.url
+    i.url.includes('extension://') && i.url.includes('index.html#/view')
   );
   if (tabsRes.length === 0) {
-    await browser.tabs.create({url: browser.runtime.getURL('index.html#/view/index')})
+    if(type == 0){
+      await browser.tabs.create({url: browser.runtime.getURL('index.html#/view/home')})
+    } else {
+      await browser.tabs.create({url: browser.runtime.getURL('index.html#/view/index')})
+    }
   } else {
+
     let latestTab = tabsRes.splice(tabsRes.length - 1, 1);
     const tabIndex = tabs.findIndex(tab => tab.id === latestTab[0].id);
     browser.tabs.highlight({windowId, tabs: tabIndex});
+    if(type == 1){   // tabs 关闭功能 
+      browser.tabs.update(latestTab[0].id, {
+        'url': browser.runtime.getURL('index.html#/view/index'),
+        'selected': true
+      });
+    }
 
     /*关闭其他tab*/
     if (tabsRes.length !== 0) {
@@ -91,7 +102,6 @@ const storeTabs = async tabs => {
   browser.tabs.remove(tabs.map(i => i.id));
 
   const newList = list.createNewTabList({tabs: pickTabs(tabs)});
-  console.log("newList"+newList)
   /*get chrome bookmark pro folder BPF*/
   let unSortFolder = "TabHome";
   chrome.bookmarks.getChildren("2", function (nodesRes) {
@@ -118,24 +128,37 @@ const storeTabs = async tabs => {
 
 const storeSelectedTabs = async () => {
   const tabs = await getSelectedTabs();
-  const allTabs = await getAllTabsInCurrentWindow();
-  if (tabs.length === allTabs.length) await openTabLists();
+  // const allTabs = await getAllTabsInCurrentWindow();
+  // if (tabs.length === allTabs.length) 
+  await openTabLists(1);
   return storeTabs(tabs)
 };
 
-const storeLeftTabs = async () => storeTabs((await groupTabsInCurrentWindow()).left);
-const storeRightTabs = async () => storeTabs((await groupTabsInCurrentWindow()).right);
-const storeTwoSideTabs = async () => storeTabs((await groupTabsInCurrentWindow()).twoSide);
+const storeLeftTabs = async () => {
+  const tabs = (await groupTabsInCurrentWindow()).left
+  await openTabLists(1); 
+  return storeTabs(tabs);
+}
+const storeRightTabs = async () => {
+  const tabs = (await groupTabsInCurrentWindow()).right
+  await openTabLists(1); 
+  return storeTabs(tabs);
+}
+const storeTwoSideTabs = async () => {
+  const tabs = (await groupTabsInCurrentWindow()).twoSide
+  await openTabLists(1); 
+  return storeTabs(tabs);
+}
 
 const storeAllTabs = async () => {
   const tabs = await getAllTabsInCurrentWindow();
-  await openTabLists();
+  await openTabLists(1);
   return storeTabs(tabs)
 };
 
 const storeAllTabInAllWindows = async () => {
   const windows = await browser.windows.getAll();
-  await openTabLists();
+  await openTabLists(1);
   for (const window of windows) {
     const tabs = await getAllInWindow(window.id);
     storeTabs(tabs)
