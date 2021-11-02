@@ -315,12 +315,17 @@
 
       /*新创建的添加到unsortBookmarks, 如果存在，则替换。每触发一个callback,都要判断是否存在(index0)*/
       appendNewFolderCallback(idStr, BookmarkTreeNode) {
-        if (typeof BookmarkTreeNode.url === "undefined") {
+        if (typeof BookmarkTreeNode.url === "undefined") {   /*文件夹返回*/
           this.newFolder = BookmarkTreeNode;
           this.newFolder.children = [];
         } else {
+          this.newFolder.children.forEach(element => {  //有可能出现重复
+              if(element.id == BookmarkTreeNode.id){
+                return;
+              }
+          });
           this.newFolder.children.push(BookmarkTreeNode);
-
+          
           let index0 = -1;
           for (let i = this.unsortBookmarks.length - 1; i >= 0; i--) {
             if (this.unsortBookmarks[i].id === this.newFolder.id) {
