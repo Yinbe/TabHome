@@ -40,11 +40,11 @@ const openTabLists = async () => {
   const windowId = currentWindow.id;
   const tabs = await getAllInWindow(windowId);
   let tabsRes = tabs.filter(i =>
-    browser.runtime.getURL('index.html#/view/') === i.url
-    || browser.runtime.getURL('index.html#/view') === i.url
+    browser.runtime.getURL('index.html#/view/index') === i.url
+    || browser.runtime.getURL('index.html#/view/index') === i.url
   );
   if (tabsRes.length === 0) {
-    await browser.tabs.create({url: browser.runtime.getURL('index.html#/view/')})
+    await browser.tabs.create({url: browser.runtime.getURL('index.html#/view/index')})
   } else {
     let latestTab = tabsRes.splice(tabsRes.length - 1, 1);
     const tabIndex = tabs.findIndex(tab => tab.id === latestTab[0].id);
@@ -91,7 +91,7 @@ const storeTabs = async tabs => {
   browser.tabs.remove(tabs.map(i => i.id));
 
   const newList = list.createNewTabList({tabs: pickTabs(tabs)});
-
+  console.log("newList"+newList)
   /*get chrome bookmark pro folder BPF*/
   let unSortFolder = "TabHome";
   chrome.bookmarks.getChildren("2", function (nodesRes) {
