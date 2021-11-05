@@ -1,5 +1,6 @@
 import moment from 'moment'
 import __ from './i18n'
+import {getBrowserType} from './browserType'
 
 moment.locale(__('@@ui_locale'));
 
@@ -47,11 +48,19 @@ const getMainDomain = domain => {
   return domain.split('.').slice(-2).join('.');
 }
 
+const isFF = () => {
+  return getBrowserType === 'FF'
+}
+
+
+
+
 export default {
   formatTime,
   formatTimeForTitle,
   asyncWorker,
   getDomain,
   getMainDomain,
-  getUrlDomain
+  getUrlDomain,
+  isFF
 }
