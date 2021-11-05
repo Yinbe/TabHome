@@ -38,6 +38,7 @@ module.exports = {
     }),
     new VueLoaderPlugin(),
     new UglifyJsPlugin({
+      extractComments: false,
       uglifyOptions: {
         parallel: 4,
         compress: {

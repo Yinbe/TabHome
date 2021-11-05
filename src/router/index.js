@@ -5,13 +5,23 @@ import enLocale from 'element-ui/lib/locale/lang/en'
 import zhLocale from 'element-ui/lib/locale/lang/zh-CN'
 import ElementLocale from 'element-ui/lib/locale'
 import VueI18n from 'vue-i18n'
-import Index from '@/page/Index'
-import View from '@/page/View'
-import Home from '@/page/Home'
-import Extension from '@/page/Extension'
-import Options from '@/page/Options'
-import History from '@/page/History'
-import About from '@/page/About'
+// import Index from '@/page/Index'
+// import View from '@/page/View'
+// import Home from '@/page/Home'
+// import Extension from '@/page/Extension'
+// import Options from '@/page/Options'
+// import History from '@/page/History'
+// import About from '@/page/About'
+
+
+
+const Index = () => import('@/page/Index')
+const View = () => import('@/page/View')
+const Home = () => import('@/page/Home')
+const Extension = () => import('@/page/Extension')
+const Options = () => import('@/page/Options')
+const History = () => import('@/page/History')
+const About = () => import('@/page/About')
 
 Vue.use(VueI18n)
 Vue.use(Router);
