@@ -107,7 +107,6 @@ const storeTabs = async tabs => {
   if(utils.isFF) {
     subId = "unfiled_____"
   }
-  alert(subId)
   let nodesRes = await browser.bookmarks.getSubTree(subId);
   let nodes = nodesRes.filter(i => i.title === unSortFolder);
   if (nodes.length === 0) {
