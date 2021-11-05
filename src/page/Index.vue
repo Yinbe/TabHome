@@ -24,7 +24,7 @@
                   <a>{{folder.title === '' ? __('ui_home_view_tab_title') : folder.title}}</a>
                 </div>
               </div>
-              <draggable :list="folder.children" :animation="350" group="unsort" @change="draggableLog">
+              <draggable :list="folder.children" :animation="350" :fallbackTolerance="1" group="unsort" @change="draggableLog">
                 <div class="link" style="width: inherit" v-for="(tab, tabIndex) in folder.children" :key="tabIndex">
                   <div class="link-title">
                     <img :src="'chrome://favicon/size/16@2x/'+tab.url">
@@ -63,7 +63,7 @@
                   </div>
                 </div>
                 <el-row :gutter="10" style="width: inherit" :list="folder.children">
-                  <draggable v-model="folder.children" :animation="350" group="sorted" @change="draggableLog">
+                  <draggable v-model="folder.children" :animation="350" :fallbackTolerance="1" group="sorted" @change="draggableLog">
                     <transition-group>
                       <el-col :span="6" v-for="(tab, tabIndex) in folder.children" :key="tabIndex">
                         <div class="link">
@@ -92,6 +92,8 @@
   import tabs from "@/common/onetab/tabs";
   import storage from "@/common/onetab/storage";
   import __ from "@/common/util/i18n";
+  import {isFF} from '@/common/util/utils'
+  import browser from 'webextension-polyfill'
 
   export default {
     name: "Index",
@@ -344,24 +346,27 @@
       /*get other-bookmarks*/
       async getOther() {
         const _this = this;
-        chrome.bookmarks.getSubTree("2", function (res) {
-          let otherFolder = res[0];
-          let resIncludeBPF = otherFolder.children.filter(i => i.title === "TabHome");
+        let subId = "2";
+        if(isFF) {
+          subId = "unfiled_____"
+        }
+        let nodesRes = await browser.bookmarks.getSubTree(subId);
+        let otherFolder = nodesRes[0];
+        let resIncludeBPF = otherFolder.children.filter(i => i.title === "TabHome");
 
-          if (resIncludeBPF.length === 0) {
-            _this.sortedBookmarks = _this.get(otherFolder);
-          } else {
-            let bpfFolder = resIncludeBPF[0];
-            otherFolder.children.splice(bpfFolder.index, 1);
+        if (resIncludeBPF.length === 0) {
+          _this.sortedBookmarks = _this.get(otherFolder);
+        } else {
+          let bpfFolder = resIncludeBPF[0];
+          otherFolder.children.splice(bpfFolder.index, 1);
 
-            _this.unsortBookmarks = _this.get(bpfFolder);
-            _this.sortedBookmarks = _this.get(otherFolder);
+          _this.unsortBookmarks = _this.get(bpfFolder);
+          _this.sortedBookmarks = _this.get(otherFolder);
 
-            if (resIncludeBPF.length !== 1) {
-              console.log('unsort只会显示排在最前面的"TabHome"文件夹,其他的"TabHome"文件夹将会显示在sorted,请保持有且仅有一个"TabHome"文件夹');
-            }
+          if (resIncludeBPF.length !== 1) {
+            console.log('unsort只会显示排在最前面的"TabHome"文件夹,其他的"TabHome"文件夹将会显示在sorted,请保持有且仅有一个"TabHome"文件夹');
           }
-        });
+        }
       },
       get(folder) {
         let res = [];

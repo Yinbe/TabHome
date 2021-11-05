@@ -43,7 +43,7 @@
             </div>
           </div>
           <el-row :gutter="10" style="width: inherit" :list="folder.children">
-            <draggable v-model="folder.children" :animation="350" group="sorted" @change="draggableLog">
+            <draggable v-model="folder.children" :animation="350" :fallbackTolerance="1" group="sorted" @change="draggableLog">
               <transition-group>
                 <el-col :span="6" v-for="(tab, tabIndex) in folder.children" :key="tabIndex">
                   <div class="link">

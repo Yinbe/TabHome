@@ -97,7 +97,6 @@ import storage from "@/common/onetab/storage";
 import options from "@/common/util/options";
 import __ from "@/common/util/i18n";
 import _ from "lodash";
-import asyncWorker from "@/common/util/utils";
 
 export default {
   data() {
