@@ -26,9 +26,8 @@ export const getBrowserType = () => {
         } else if (fIEVersion == 11) {
             return "IE11";
         } else {
-            return "0";
-        }//IE版本过低
-        return "IE";
+            return "IE";
+        }
     }
     if (isOpera) {
         return "Opera";
