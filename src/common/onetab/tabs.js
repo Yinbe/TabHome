@@ -104,10 +104,7 @@ const storeTabs = async tabs => {
   /*get chrome bookmark pro folder BPF*/
   let unSortFolder = "TabHome";
   let subId = "2";
-  if(utils.isFF) {
-    subId = "unfiled_____"
-  }
-  let nodesRes = await browser.bookmarks.getSubTree(subId);
+  let nodesRes = await browser.bookmarks.getChildren(subId);
   let nodes = nodesRes.filter(i => i.title === unSortFolder);
   if (nodes.length === 0) {
     console.log('请保持一个名字为"' + unSortFolder + '"的文件夹; 随后会为你自动创建一个"' + unSortFolder + '"文件夹');

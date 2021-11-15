@@ -47,7 +47,7 @@
               <transition-group>
                 <el-col :span="6" v-for="(tab, tabIndex) in folder.children" :key="tabIndex">
                   <div class="link">
-                    <div class="link-title">
+                    <div class="link-title" @click.prevent="openBookmark(tab.url,tab.id)">
                       <img :src="'chrome://favicon/size/16@2x/'+tab.url">
                       <a :href="tab.url" target="_blank">{{tab.title}}</a>
                     </div>
@@ -351,7 +351,10 @@
         }
         return false;
       },
-
+      openBookmark(url,bookmarkID) {
+        chrome.tabs.create({url:url})
+        chrome.bookmarks.remove(bookmarkID);
+      },
       /*2 bookmark*/
       /*remove, add(有,但在tab.storeTabs), update(没有,但是可以在chrome书签管理器操作), move*/
       removeBookmark(bookmarkID) {

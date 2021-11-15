@@ -26,9 +26,9 @@
               </div>
               <draggable :list="folder.children" :animation="350" :fallbackTolerance="1" group="unsort" @change="draggableLog">
                 <div class="link" style="width: inherit" v-for="(tab, tabIndex) in folder.children" :key="tabIndex">
-                  <div class="link-title">
+                  <div class="link-title" @click.prevent="openBookmark(tab.url,tab.id)">
                     <img :src="'chrome://favicon/size/16@2x/'+tab.url">
-                    <a :href="tab.url" target="_blank" @click="removeBookmark(tab.id)">{{tab.title}}</a>
+                    <a :href="tab.url" target="_blank">{{tab.title}}</a>
                   </div>
                   <i class="el-icon-close" @click="removeBookmark(tab.id)"></i>
                 </div>
@@ -67,7 +67,7 @@
                     <transition-group>
                       <el-col :span="6" v-for="(tab, tabIndex) in folder.children" :key="tabIndex">
                         <div class="link">
-                          <div class="link-title">
+                          <div class="link-title" @click.prevent="openBookmark(tab.url,tab.id)">
                             <img :src="'chrome://favicon/size/16@2x/'+tab.url">
                             <a :href="tab.url" target="_blank">{{tab.title}}</a>
                           </div>
@@ -92,7 +92,6 @@
   import tabs from "@/common/onetab/tabs";
   import storage from "@/common/onetab/storage";
   import __ from "@/common/util/i18n";
-  import {isFF} from '@/common/util/utils'
   import browser from 'webextension-polyfill'
 
   export default {
@@ -179,7 +178,10 @@
         }
         return false;
       },
-
+      openBookmark(url,bookmarkID) {
+        chrome.tabs.create({url:url})
+        chrome.bookmarks.remove(bookmarkID);
+      },
       /*2 bookmark*/
       /*remove, add(有,但在tab.storeTabs), update(没有,但是可以在chrome书签管理器操作), move*/
       removeBookmark(bookmarkID) {
@@ -347,9 +349,6 @@
       async getOther() {
         const _this = this;
         let subId = "2";
-        if(isFF) {
-          subId = "unfiled_____"
-        }
         let nodesRes = await browser.bookmarks.getSubTree(subId);
         let otherFolder = nodesRes[0];
         let resIncludeBPF = otherFolder.children.filter(i => i.title === "TabHome");
