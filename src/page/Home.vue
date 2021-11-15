@@ -352,7 +352,7 @@
         return false;
       },
       openBookmark(url,bookmarkID) {
-        chrome.tabs.create({url:url})
+        chrome.tabs.create({'url':url})
         chrome.bookmarks.remove(bookmarkID);
       },
       /*2 bookmark*/

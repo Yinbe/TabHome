@@ -155,6 +155,9 @@ const init = async () => {
   browser.tabs.onActivated.addListener(_.debounce(activeInfo => {
     dynamicDisableMenu(activeInfo)
   }, 200));
+  browser.tabs.onMoved.addListener(_.debounce(activeInfo => {
+    dynamicDisableMenu(activeInfo)
+  }, 200));
 
   /*快捷键监听*/
   browser.commands.onCommand.addListener(async command => {
