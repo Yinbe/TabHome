@@ -149,7 +149,7 @@
           let index = obj.newIndex;
 
           let parentId = this.newLocationRepeat(this.unsortBookmarks, index, bookmarkID);
-          if (!parentId) this.newLocationRepeat(this.sortedBookmarks, index, bookmarkID);
+          if (!parentId) {parentId = this.newLocationRepeat(this.sortedBookmarks, index, bookmarkID);}
           this.fromDraggable = true;
           this.moveFolder(bookmarkID, {parentId, index});
         } else if (typeof array.moved !== 'undefined') {
