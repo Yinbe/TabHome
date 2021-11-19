@@ -323,13 +323,12 @@
           this.newFolder = BookmarkTreeNode;
           this.newFolder.children = [];
         } else {
-          this.newFolder.children.forEach(element => {  //有可能出现重复
-              if(element.id == BookmarkTreeNode.id){
-                return;
-              }
+          let hasin = this.newFolder.children.filter(element => {  //有可能出现重复
+                return element.id == idStr;
           });
-          this.newFolder.children.push(BookmarkTreeNode);
-          
+          if(hasin.length == 0) {
+            this.newFolder.children.push(BookmarkTreeNode);
+          }
           let index0 = -1;
           for (let i = this.unsortBookmarks.length - 1; i >= 0; i--) {
             if (this.unsortBookmarks[i].id === this.newFolder.id) {
