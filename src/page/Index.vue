@@ -12,7 +12,7 @@
                   <i class="el-icon-star-off" @click="moveFolder(folder.id, defaultDestinationFolder)"></i>
                 </el-tooltip>
                 <el-tooltip effect="dark" :content="__('ui_home_view_tab_recovery')" placement="bottom">
-                  <i class="el-icon-position" @click="viewFolder(folder)"></i>
+                  <i class="el-icon-position" @click="viewFolderDelete(folder)"></i>
                 </el-tooltip>
                 <div class="label-title">
                   <a>{{folder.title === '' ? __('ui_home_view_tab_title') : folder.title}}</a>
@@ -180,7 +180,7 @@
       },
       openBookmark(url,bookmarkID) {
         chrome.tabs.create({'url':url})
-        chrome.bookmarks.remove(bookmarkID);
+        this.removeBookmark(bookmarkID);
       },
       /*2 bookmark*/
       /*remove, add(有,但在tab.storeTabs), update(没有,但是可以在chrome书签管理器操作), move*/
@@ -199,7 +199,6 @@
       },
       modifyFolderTitle(folderID) {
         this.selectedFolderIndex = -1
-        console.log(folderID)
         const _this = this;
           let value = this.folderTitle.trim()
           if(!value){
@@ -271,6 +270,9 @@
             for (let j = 0; j < folder.children.length; j++) {
               if (folder.children[j].id === bookmarkID) {
                 folder.children.splice(j, 1);
+                if(folder.children.length == 0){
+                  this.removeFolder(folder.id);
+                }
                 return true;
               }
             }
@@ -395,6 +397,10 @@
         } else {
           tabs.viewFolder(folder);
         }
+      },
+      async viewFolderDelete(folder) {
+        await this.viewFolder(folder)
+        this.removeFolder(folder.id)
       },
       _px(param) {
         return param + 'px';
