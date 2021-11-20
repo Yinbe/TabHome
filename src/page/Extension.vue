@@ -101,17 +101,17 @@
                 browser.tabs.create({ url: `chrome://extensions/?id=${ext.id}` });
             },
             clickDelete(ext) {
-                chrome.management.uninstall(ext.id);
+                browser.management.uninstall(ext.id);
             },
             changeSwitch(ext){
-                chrome.management.setEnabled(ext.id, ext.enabled);
+                browser.management.setEnabled(ext.id, ext.enabled);
             },
             getIconUrl(icons,size = 16) {
                 size *= window.devicePixelRatio;
                 if (icons) {
                     return icons[0].url
                 }
-                return 'icons/puzzle.svg'
+                return '/assets/icons/puzzle.svg'
             },
 
         }
