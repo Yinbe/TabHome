@@ -2,107 +2,131 @@
   <img src="./src/assets/icons/icon_128.png">
 </p>
 
-<h1 align="center">onetab2</h1>
+<h1 align="center">TabHome</h1>
 
-安装地址：[Bookmark - Chrome 网上应用店](https://chrome.google.com/webstore/detail/tabhome/niiapeibeibgagkbjbicpcljemedehcf)
+Installation ：[TabHome - Chrome Web Store](https://chrome.google.com/webstore/detail/tabhome/niiapeibeibgagkbjbicpcljemedehcf)
+
+
+Installation ：[TabHome - microsoft addons](https://microsoftedge.microsoft.com/addons/detail/tabhome/bdafbnhjbgfpgfheddigmlbabkpdfebm)
+
+
 
 ---
 
 [中文README](README.md)
 
-Process bookmarks for Chrome\"Other Folders\". There are storage \"temporary\" bookmarks, classified save bookmarks, shortcut key operations, custom settings, quick view bookmarks, efficient management of bookmarks and more.
+Similar to OneTab, handles bookmarks for Chrome "other folders". There are functions such as storing "temporary" bookmarks, saving bookmarks in categories, shortcut key operations, custom settings, quick viewing of bookmarks, support for direct search of bookmarks in the search bar, and efficient management of bookmarks. View the browsing history of the current website and manage the installed extensions.
 
-### 1 Features
+### 1 Tutorials
 
-##### 主页（展示）
+#### Home navigation
 
 ![](README.assets/2021-11-02_111734.png)
+#### Bookmarks tab
 
-[教程讨论（Tutorial discussion） · Issue #1 · rejerry/bookmark](https://github.com/rejerry/bookmark/issues/1)
+![](README.assets/2021-11-02_111743.png)
 
-[I have read the tutorial discussion; want more features or submit a bug? Tell me here.](https://github.com/rejerry/bookmark/issues/new)
-#### Features
+#### Browser extension management
+
+![](README.assets/2021-11-02_111754.png)
+
+#### omnibox search
+
+![](README.assets/2021-11-02_111904.png)
+
+#### History of the current domain name website
+
+![](README.assets/2021-11-02_112004.png)
+
+#### Function setting
+
+![](README.assets/2021-11-02_111804.png)
+
+[教程讨论（Tutorial discussion） · Issue #1 · Yinbe/TabHome](https://github.com/Yinbe/TabHome/issues/1)
+
+[I have watched the tutorial discussion; want more features or submit a bug?](https://github.com/Yinbe/TabHome/issues/new)
+
+#### Function
 
 - "Temporary" bookmarks
-- Waterfall stream bookmarks
-- Drag and drop
+- Temporary bookmarks
+- Support bookmark synchronization
+- Home page bookmark navigation
+- Drag and drop tags
+- Quickly search bookmarks in the search box
+- Display the history of the current domain name website
+- Browser extension management
 - hot key
-- Settings
-- Icon (Icon) right-click menu
-- Right click menu (page context menu)
+- set up
+- Icon right-click menu
+- Right-click menu (page context menu)
 - Support Chinese and English
 
-#### 7 kinds of operations
+#### 8 operations
 
 - Display list
 - Save the label on the left
 - Save the label on the right
-- Save selected tags
-- Store unchecked labels
-- Store all tags
-- Store all tags for all windows
+- Save the selected label
+- Save unselected labels
+- Save all tags
+- Store all tabs of all windows
+- Display the current website history
 
 ### 2 Q&A
 
-##### What is bookmark?
+##### What is TabHome?
 
-Handles bookmarks that overflow from the bookmarks bar. Process bookmarks for Chrome\"Other Folders\".
+Similar to onetab handles tab bar overflow and saves it as a bookmark. It also supports sorting the saved bookmarks, forming a custom navigation, and supporting synchronization!
+Convenient bookmark search function, support search bar to quickly search bookmarks (based on browser "omnibox": {"keyword": "th" }), keyword th.
+Support browser extension management, easily turn off the search extension.
+Quickly display the browsing history of the current domain name website in the historical time period.
 
-##### Best practices
+##### Best Practices
 
-- "Temporary" bookmarks: (left side of the home page, black background) used to store temporary bookmarks, analogous to onetab; but unlike onetab, bookmarks on "temporary" bookmarks for "bookmark" are saved to chrome, which is no different from other bookmarks. After use, you can delete or save to “Waterfall Stream Bookmark”.
-- Waterfall stream bookmark: (the right side of the homepage) uses a waterfall flow layout. You can modify the contents of the folder; drag and drop the merged folder. Large-scale changes are recommended to be modified in the bookmark manager, which is more efficient.
-- Number of folder bookmarks: No limit; recommended not too many, no more than 20.
+- "Temporary" bookmarks: (left part of the bookmark page) is used to store temporary bookmarks, analogous to onetab; but different from onetab, the bookmarks on the "temporary" bookmarks of "bookmark" are saved to chrome, just like other bookmarks. It can be deleted or saved to "temporary bookmark" after use. (From the boss jerry)
+- Temporary bookmarks: (the right part of the bookmark page) adopts a stream layout. You can modify the contents of the folder; drag and drop to merge the bookmark folders. Large-scale changes are recommended to be modified in the bookmark manager, which is more efficient. (From the boss jerry)
+- Navigation bookmarks: Temporary bookmarks can be organized into a folder and moved to the home page to become navigation bookmarks. You can also add bookmarks to the navigation through the original bookmark save function.
+##### What is the "TabHome" folder
 
-##### What is the "BPF" folder?
+The "TabHome" folder is set to store "temporary" bookmarks.
 
-The "BPF" folder is set to store "temporary" bookmarks.
-
-If there are more than one, only one will be displayed; please keep a folder with only one "BPF"; it is recommended to put it under the first layer of "Other Folders" and set it to the top.
-
-##### "Waterfall Streaming Bookmarks" Why There Is No Folder View
-
-The waterfall stream bookmarks are designed with waterfall flow, 4 columns, each column can hold 35+ bookmarks. A single page can hold 150+ bookmarks. 6 pages can hold nearly 1k bookmarks
+If there are more than one, only one will be displayed; please keep one and only one "TabHome" folder; it is recommended to put it under the first layer of "Other Folders" and put it on top.
 
 ##### Synchronize
 
-Bookmark is just to help manage and view chrome "other bookmarks", data synchronization is provided by google.
+Data synchronization is provided by the browser's built-in synchronization function. Please log in to your account and enable synchronization.
 
-##### Compatible
+##### compatible
 
-Only developed and tested in chrome. But the theory supports other browsers that can install the chrome plugin. [兼容讨论（Compatible discussion） · Issue #2 · rejerry/bookmark](https://github.com/rejerry/bookmark/issues/2)
-
-##### Others
-
-Empty folders are not displayed by default
+Only developed and tested in chrome and the new version of Edge. But the theory supports other browsers that can install chrome plug-ins.[兼容讨论（Compatible discussion） · Issue #2 · Yinbe/TabHome](https://github.com/Yinbe/TabHome/issues/2)
 
 ### 3 Installation
 
-[Bookmark - Chrome 网上应用店](https://chrome.google.com/webstore/detail/bookmark/paigdnkkmodopofccgdeacgoocgeijkn/related?hl=zh-CN&gl=US)
+[TabHome - Chrome Web Store](https://chrome.google.com/webstore/detail/tabhome/niiapeibeibgagkbjbicpcljemedehcf)
+
+[TabHome - microsoft addons](https://microsoftedge.microsoft.com/addons/detail/tabhome/bdafbnhjbgfpgfheddigmlbabkpdfebm)
 
 ### 4 Development
 
-Build your own from following steps：
-- Clone this repo
-- Install dependencies (use `yarn` command)
-- Auto reload (use `yarn dev` command)
-- Click LOAD UNPACKED button and select ./dist path
-- Build (use `yarn build` command)
+Compile from source code:
 
-### 5 License
+- Clone this warehouse
+- Install dependencies (use `yarn` command)
+- Automatic reload (using `yarn dev` command)
+- Click the `Load unzipped extension` button and select the `./dist` directory
+- Compile and package (use `yarn build` command)
+
+### 5 license
 
 GPL3.0
 
-### 6 Thanks 
+### 6 grateful
 
-Partial reference [cnwangjie/better-onetab: A better OneTab for Chrome & Firefox] (https://github.com/cnwangjie/better-onetab), thank you!
+Fork jerry, [rejerry/bookmark](https://github.com/rejerry) Follow the open source agreement GPL3.0 development, thank you!
+Part of the reference [cnwangjie/better-onetab: A better OneTab for Chrome &amp; Firefox](https://github.com/cnwangjie/better-onetab), thank you!
+Part of the reference [fiteprint/fiteprint: site footprint-current website browsing history](https://github.com/fiteprint/fiteprint), thank you!
 
-### 7 Author
+### 7 finally
 
-jerry · [rejerry(github)](https://github.com/rejerry)
-
-### 8 At last
-
-Thank you for watching; Welcome to install and use, discuss bug, discuss function 3 linked.Feel free to comment below
-
-Thanks  [cnwangjie/better-onetab: A better OneTab for Chrome & Firefox](https://github.com/cnwangjie/better-onetab)
+Welcome to install and use ([TabHome](https://github.com/Yinbe/TabHome)), discuss bugs, and discuss three functions. Welcome to comment below the plug-in, the Star project
