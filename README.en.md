@@ -4,12 +4,9 @@
 
 <h1 align="center">TabHome</h1>
 
-Installation ：[TabHome - Chrome Web Store](https://chrome.google.com/webstore/detail/tabhome/niiapeibeibgagkbjbicpcljemedehcf)
-
-
-Installation ：[TabHome - microsoft addons](https://microsoftedge.microsoft.com/addons/detail/tabhome/bdafbnhjbgfpgfheddigmlbabkpdfebm)
-
-
+Installation ：  
+[Chrome Web Store](https://chrome.google.com/webstore/detail/tabhome/niiapeibeibgagkbjbicpcljemedehcf)  
+[Microsoft addons](https://microsoftedge.microsoft.com/addons/detail/tabhome/bdafbnhjbgfpgfheddigmlbabkpdfebm)
 
 ---
 
@@ -103,9 +100,9 @@ Only developed and tested in chrome and the new version of Edge. But the theory 
 
 ### 3 Installation
 
-[TabHome - Chrome Web Store](https://chrome.google.com/webstore/detail/tabhome/niiapeibeibgagkbjbicpcljemedehcf)
+[Chrome Web Store](https://chrome.google.com/webstore/detail/tabhome/niiapeibeibgagkbjbicpcljemedehcf)
 
-[TabHome - microsoft addons](https://microsoftedge.microsoft.com/addons/detail/tabhome/bdafbnhjbgfpgfheddigmlbabkpdfebm)
+[Microsoft addons](https://microsoftedge.microsoft.com/addons/detail/tabhome/bdafbnhjbgfpgfheddigmlbabkpdfebm)
 
 ### 4 Development
 
@@ -117,16 +114,16 @@ Compile from source code:
 - Click the `Load unzipped extension` button and select the `./dist` directory
 - Compile and package (use `yarn build` command)
 
-### 5 license
+### 5 License
 
 GPL3.0
 
-### 6 grateful
+### 6 Grateful
 
 Fork jerry, [rejerry/bookmark](https://github.com/rejerry) Follow the open source agreement GPL3.0 development, thank you!  
 Part of the reference [cnwangjie/better-onetab: A better OneTab for Chrome &amp; Firefox](https://github.com/cnwangjie/better-onetab), thank you!   
 Part of the reference [fiteprint/fiteprint: site footprint-current website browsing history](https://github.com/fiteprint/fiteprint), thank you!
 
-### 7 finally
+### 7 Finally
 
 Welcome to install and use ([TabHome](https://github.com/Yinbe/TabHome)), discuss bugs, and discuss three functions. Welcome to comment below the plug-in, the Star project

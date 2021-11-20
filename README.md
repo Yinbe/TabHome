@@ -3,9 +3,9 @@
 </p>
 <h1 align="center">TabHome</h1>
 
-安装地址：
-[TabHome - Chrome 网上应用店](https://chrome.google.com/webstore/detail/tabhome/niiapeibeibgagkbjbicpcljemedehcf)
-[TabHome - microsoft addons](https://microsoftedge.microsoft.com/addons/detail/tabhome/bdafbnhjbgfpgfheddigmlbabkpdfebm)
+安装地址：  
+[Chrome 网上应用店](https://chrome.google.com/webstore/detail/tabhome/niiapeibeibgagkbjbicpcljemedehcf)   
+[Microsoft addons](https://microsoftedge.microsoft.com/addons/detail/tabhome/bdafbnhjbgfpgfheddigmlbabkpdfebm)
 
 ---
 
@@ -99,8 +99,9 @@
 
 ### 3 安装
 
-[TabHome - Chrome 网上应用店](https://chrome.google.com/webstore/detail/tabhome/niiapeibeibgagkbjbicpcljemedehcf)
-[TabHome - microsoft addons](https://microsoftedge.microsoft.com/addons/detail/tabhome/bdafbnhjbgfpgfheddigmlbabkpdfebm)
+[Chrome 网上应用店](https://chrome.google.com/webstore/detail/tabhome/niiapeibeibgagkbjbicpcljemedehcf)  
+
+[Microsoft addons](https://microsoftedge.microsoft.com/addons/detail/tabhome/bdafbnhjbgfpgfheddigmlbabkpdfebm)
 
 ### 4 开发
 
