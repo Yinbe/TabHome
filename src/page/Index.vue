@@ -6,8 +6,8 @@
           <div v-for="(folder, folderIndex) in unsortBookmarks.slice().reverse()" :key="folder.id"
                :order="folderIndex"
           >
-            <el-card class="box-card" :body-style="{padding: '0px'}" :style="{margin: _px(itemMeta.margin)}">
-              <div v-if="folder.title !== bpf" class="label" style="width: inherit">
+            <el-card v-if="folder.title !== bpf" class="box-card" :body-style="{padding: '0px'}" :style="{margin: _px(itemMeta.margin)}">
+              <div class="label" style="width: inherit">
                 <el-tooltip effect="dark" :content="__('ui_bookmark_view_tab_move_right')" placement="bottom">
                   <i class="el-icon-star-off" @click="moveFolder(folder.id, defaultDestinationFolder)"></i>
                 </el-tooltip>
@@ -18,11 +18,6 @@
                   <a>{{folder.title === '' ? __('ui_home_view_tab_title') : folder.title}}</a>
                 </div>
                 <i class="el-icon-close" @click="removeFolder(folder.id)"></i>
-              </div>
-              <div v-else class="label" style="width: inherit">
-                <div class="bpf-label-title">
-                  <a>{{folder.title === '' ? __('ui_home_view_tab_title') : folder.title}}</a>
-                </div>
               </div>
               <draggable :list="folder.children" :animation="350" :fallbackTolerance="1" group="unsort" @change="draggableLog">
                 <div class="link" style="width: inherit" v-for="(tab, tabIndex) in folder.children" :key="tabIndex">
@@ -378,11 +373,8 @@
           let children = p.children;
           let tabs = children.filter((i) => typeof i.children === "undefined");
           let subFolders = children.filter((i) => typeof i.children !== "undefined");
-
-          if (tabs.length !== 0) {
-            p.children = tabs;
-            res.push(p);
-          }
+          p.children = tabs;
+          res.push(p);
           stack.unshift(...subFolders);
         }
         return res;

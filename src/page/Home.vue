@@ -207,7 +207,7 @@
             let tabs = children.filter((i) => typeof i.children === "undefined");
             let subFolders = children.filter((i) => typeof i.children !== "undefined");
 
-            if (tabs.length !== 0) {
+            if (p.id !="0") {  //根文件夹，无需显示
               p.children = tabs;
               res.push(p);
             }
