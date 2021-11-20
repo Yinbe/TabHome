@@ -123,8 +123,8 @@ GPL3.0
 
 ### 6 grateful
 
-Fork jerry, [rejerry/bookmark](https://github.com/rejerry) Follow the open source agreement GPL3.0 development, thank you!
-Part of the reference [cnwangjie/better-onetab: A better OneTab for Chrome &amp; Firefox](https://github.com/cnwangjie/better-onetab), thank you!
+Fork jerry, [rejerry/bookmark](https://github.com/rejerry) Follow the open source agreement GPL3.0 development, thank you!  
+Part of the reference [cnwangjie/better-onetab: A better OneTab for Chrome &amp; Firefox](https://github.com/cnwangjie/better-onetab), thank you!   
 Part of the reference [fiteprint/fiteprint: site footprint-current website browsing history](https://github.com/fiteprint/fiteprint), thank you!
 
 ### 7 finally

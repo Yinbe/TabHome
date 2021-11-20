@@ -118,8 +118,8 @@ GPL3.0
 
 ### 6 感谢
 
-fork自大佬jerry · [rejerry/bookmark](https://github.com/rejerry) 遵循开源协议GPL3.0开发，表示感谢！
-部分参考 [cnwangjie/better-onetab: A better OneTab for Chrome &amp; Firefox](https://github.com/cnwangjie/better-onetab) ，表示感谢！
+fork自大佬jerry · [rejerry/bookmark](https://github.com/rejerry) 遵循开源协议GPL3.0开发，表示感谢！  
+部分参考 [cnwangjie/better-onetab: A better OneTab for Chrome &amp; Firefox](https://github.com/cnwangjie/better-onetab) ，表示感谢！  
 部分参考 [fiteprint/fiteprint: 站内足迹 - 当前网站浏览历史](https://github.com/fiteprint/fiteprint) ，表示感谢！
 
 ### 7 最后
