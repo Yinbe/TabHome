@@ -4,7 +4,7 @@
 
 <h1 align="center">onetab2</h1>
 
-安装地址：[Bookmark - Chrome 网上应用店](https://chrome.google.com/webstore/detail/bookmark/paigdnkkmodopofccgdeacgoocgeijkn/related?hl=zh-CN&gl=US)
+安装地址：[Bookmark - Chrome 网上应用店](https://chrome.google.com/webstore/detail/tabhome/niiapeibeibgagkbjbicpcljemedehcf)
 
 ---
 
@@ -16,7 +16,7 @@ Process bookmarks for Chrome\"Other Folders\". There are storage \"temporary\" b
 
 ##### 主页（展示）
 
-![](README.assets/SHOW_BLACK_HAVE_CHROME_TITLE.png)
+![](README.assets/2021-11-02_111734.png)
 
 [教程讨论（Tutorial discussion） · Issue #1 · rejerry/bookmark](https://github.com/rejerry/bookmark/issues/1)
 

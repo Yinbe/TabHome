@@ -1,9 +1,9 @@
 <p align="center">
   <img src="./src/assets/icons/icon_128.png">
 </p>
-<h1 align="center">Bookmark</h1>
+<h1 align="center">TabHome</h1>
 
-安装地址：[Bookmark - Chrome 网上应用店](https://chrome.google.com/webstore/detail/bookmark/paigdnkkmodopofccgdeacgoocgeijkn/related?hl=zh-CN&gl=US)
+安装地址：[TabHome - Chrome 网上应用店](https://chrome.google.com/webstore/detail/tabhome/niiapeibeibgagkbjbicpcljemedehcf)
 
 ---
 
@@ -15,7 +15,7 @@
 
 #### 主页
 
-![](README.assets/SHOW_BLACK_HAVE_CHROME_TITLE.png)
+![](README.assets/2021-11-02_111734.png)
 
 [教程讨论（Tutorial discussion） · Issue #1 · rejerry/bookmark](https://github.com/rejerry/bookmark/issues/1)
 
@@ -78,11 +78,12 @@ bookmark只是帮助管理和查看chrome “其他书签” ，数据同步由g
 
 ### 3 安装
 
-[Bookmark - Chrome 网上应用店](https://chrome.google.com/webstore/detail/bookmark/paigdnkkmodopofccgdeacgoocgeijkn/related?hl=zh-CN&gl=US)
+[TabHome - Chrome 网上应用店](https://chrome.google.com/webstore/detail/tabhome/niiapeibeibgagkbjbicpcljemedehcf)
 
 ### 4 开发
 
 从源码中编译：
+
 - Clone 这个仓库
 - 安装依赖 (使用 `yarn` 命令)
 - 自动重新加载 (使用 `yarn dev` 命令)
@@ -95,7 +96,7 @@ GPL3.0
 
 ### 6 感谢
 
-部分参考 [cnwangjie/better-onetab: A better OneTab for Chrome & Firefox](https://github.com/cnwangjie/better-onetab) ，表示感谢！
+部分参考 [cnwangjie/better-onetab: A better OneTab for Chrome &amp; Firefox](https://github.com/cnwangjie/better-onetab) ，表示感谢！
 
 ### 7 作者
 
@@ -103,4 +104,4 @@ jerry · [rejerry(github)](https://github.com/rejerry)
 
 ### 8 最后
 
-谢谢你的观看！欢迎安装使用（[Bookmark - Chrome 网上应用店](https://chrome.google.com/webstore/detail/bookmark/paigdnkkmodopofccgdeacgoocgeijkn/related?hl=zh-CN&gl=US)），讨论bug，讨论功能三连。欢迎在插件下面评价，Star项目
+欢迎安装使用（[TabHome - Chrome 网上应用店](https://chrome.google.com/webstore/detail/tabhome/niiapeibeibgagkbjbicpcljemedehcf)），讨论bug，讨论功能三连。欢迎在插件下面评价，Star项目
