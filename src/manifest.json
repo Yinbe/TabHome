@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "__MSG_ext_name__",
-  "version": "1.5.21.1120",
+  "version": "1.5.22.110",
   "default_locale": "zh_CN",
   "description": "__MSG_ext_desc__",
   "author": "Yenbi <zyb0you@gmail.com>",
@@ -62,7 +62,7 @@
     "history",
     "management"
   ],
-  "homepage_url": "https://github.com/Yinbe/TabHome",
+  "homepage_url": "https://yinbe.github.io/TabHome",
   "offline_enabled": true,
   "options_page": "index.html#/view/options",
   "options_ui": {
