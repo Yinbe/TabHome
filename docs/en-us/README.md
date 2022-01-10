@@ -1,8 +1,4 @@
-<p align="center">
-  <img src="../README.assets/icon_128.png">
-</p>
-
-<h1 align="center">TabHome</h1>
+### TabHome
 
 Installation ：
 
