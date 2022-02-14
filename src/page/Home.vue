@@ -353,7 +353,6 @@
       },
       openBookmark(url,bookmarkID) {
         chrome.tabs.create({'url':url})
-        chrome.bookmarks.remove(bookmarkID);
       },
       /*2 bookmark*/
       /*remove, add(有,但在tab.storeTabs), update(没有,但是可以在chrome书签管理器操作), move*/

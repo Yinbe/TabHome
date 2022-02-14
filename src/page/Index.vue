@@ -21,7 +21,7 @@
               </div>
               <draggable :list="folder.children" :animation="350" :fallbackTolerance="1" group="unsort" @change="draggableLog">
                 <div class="link" style="width: inherit" v-for="(tab, tabIndex) in folder.children" :key="tabIndex">
-                  <div class="link-title" @click.prevent="openBookmark(tab.url,tab.id)">
+                  <div class="link-title" @click.prevent="openBookmarkAndRemove(tab.url,tab.id)">
                     <img :src="'chrome://favicon/size/16@2x/'+tab.url">
                     <a :href="tab.url" target="_blank">{{tab.title}}</a>
                   </div>
@@ -173,9 +173,12 @@
         }
         return false;
       },
-      openBookmark(url,bookmarkID) {
+      openBookmarkAndRemove(url,bookmarkID) {
         chrome.tabs.create({'url':url})
         this.removeBookmark(bookmarkID);
+      },
+      openBookmark(url,bookmarkID) {
+        chrome.tabs.create({'url':url})
       },
       /*2 bookmark*/
       /*remove, add(有,但在tab.storeTabs), update(没有,但是可以在chrome书签管理器操作), move*/
